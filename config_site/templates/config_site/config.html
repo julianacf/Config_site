@@ -21,7 +21,7 @@
 
 <body>
 	<h1>Configurações</h1>
-	<img src="{% static "image/keypad_2.pbg" %}" alt="My image">
+	<img src="{% static "image/keypad_2.png" %}" alt="My image">
 
 
 	<!-- Um formulário comum que inclui tags input -->
@@ -40,9 +40,9 @@
 <br>
 <h2>Modo de Operação</h2>
 
-<div>
+<!--<div>
 <a href="{% url 'op_mode_select' %}"> </a>
-</div>
+</div> -->
 
 <form method="POST" class="post-form">{% csrf_token %}
 			 {{ form.as_p }}
