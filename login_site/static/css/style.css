@@ -1,0 +1,38 @@
+html {font-size: 12px; /* px significa "pixels": o tamanho da fonte base é agora de 10 pixels */
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+html {
+  background-color: #ccd5e3;
+}
+
+body {
+  width: 800px;
+  margin: 0 auto;
+  background-color: #d3d8e0;
+  padding: 0 20px 20px 20px;
+  border: 2px solid black;
+}
+
+h1 {
+  font-size: 30px;
+  text-shadow: 2px 2px 1px grey;
+  text-align: center;
+}
+
+h2 {
+  font-size: 20px;
+
+}
+
+p, li {
+  color: black;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 1px;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}

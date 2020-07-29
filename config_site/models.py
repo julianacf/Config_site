@@ -10,12 +10,19 @@ class Login(models.Model):
         return self.user
 
 
-class Config(models.Model):
-    OP_MODE = (
-        ('0', 'Gateway'),
-        ('1', 'Roteador'),
+class Connection(models.Model):
+    connect_choices = (
+        ('0', 'IP Estático'),
+        ('1', 'IP Dinâmico'),
     )
-    op_mode = models.CharField(max_length=1, choices=OP_MODE)
+    connect_choice = models.CharField(max_length=1, choices=connect_choices)
+
+    def __str__(self):
+        return self.connect_choice
+
+
+class Config(models.Model):
+    op_mode = models.BooleanField()
 
     def __str__(self):
         return self.op_mode

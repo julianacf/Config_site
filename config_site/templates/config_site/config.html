@@ -21,8 +21,7 @@
 
 <body>
 	<h1>Configurações</h1>
-  <img src="image/keypad_2.png" alt="imagem">
-
+	<img src="{% static "image/keypad_2.pbg" %}" alt="My image">
 
 
 	<!-- Um formulário comum que inclui tags input -->
@@ -42,6 +41,14 @@
 <h2>Modo de Operação</h2>
 
 <div>
+<a href="{% url 'op_mode_select' %}"> </a>
+</div>
+
+<form method="POST" class="post-form">{% csrf_token %}
+			 {{ form.as_p }}
+	 </form>
+
+<!--<div>
   <input type="radio" id="gateway" name="op_mode" value="gateway"
          checked>
   <label for="gateway">Gateway</label>
@@ -51,6 +58,7 @@
   <input type="radio" id="router" name="op_mode" value="router">
   <label for="router">Roteador</label>
 </div>
+-->
 
 <br>
 <h2>Conexão</h2>

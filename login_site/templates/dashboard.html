@@ -1,0 +1,12 @@
+{% extends 'index.html' %}
+
+{% load static %}
+
+{% block content %}
+    <h1>Configurações do dispositivo</h1>
+    <br>
+    <img src="{% static "image/keypad_2.png" %}" alt="Keypad image">
+
+      <p>Dispositivo registrado para {{user.username}}</p>
+
+{% endblock %}
