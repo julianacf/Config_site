@@ -1,72 +1,13 @@
-<!doctype html>
+{% extends 'index.html' %}
 
-{% load static %}
+{% block content %}
+    <h1>Configurações do dispositivo</h1>
+			<form action="." method="POST"> {% csrf_token %}
+				{{ form.as_p}}
+        <br>
+				<input type="submit" value="Salvar" />
+			<form/>
 
-<html lang="pt-BR">
-<head>
+			<br>
 
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-
-
-
-<meta charset="UTF-8">
-
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="{% static 'css/estilo.css' %}">
-
-<title>Página de TESTE</title>
-
-</head>
-
-<body>
-	<h1>Configurações</h1>
-	<img src="{% static "image/keypad_2.png" %}" alt="My image">
-
-
-	<!-- Um formulário comum que inclui tags input -->
-<form action="getform.php" method="get">
-<fieldset>
-
-<h2>Login</h2>
-
-    Usuário: <input type="text" name="nome" /><br />
-    Senha:   <input type="email" name="email_usuario" /><br />
-
-<br>
-<input type="submit" value="Enviar" />
-
-
-<br>
-<h2>Modo de Operação</h2>
-
-
-<form method="POST" class="post-form">{% csrf_token %}
-			 {{ form.as_p }}
-	 </form>
-
-<!--<div>
-  <input type="radio" id="gateway" name="op_mode" value="gateway"
-         checked>
-  <label for="gateway">Gateway</label>
-</div>
-
-<div>
-  <input type="radio" id="router" name="op_mode" value="router">
-  <label for="router">Roteador</label>
-</div>
--->
-
-<br>
-<h2>Conexão</h2>
-
-<select name="select">
-  <option value="valor1" selected>IP Estático</option>
-  <option value="valor2">IP Dinâmico</option>
-</select>
-
-</fieldset>
-</form>
-
-</body>
-</html>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends 'index.html' %}
+
+{% block content %}
+    <h1>Status do dispositivo</h1>
+
+    <h2>Tipo de Conexão:</h2> <label>{{ connect }}</label>
+		<br>
+    <h2>Modo de Operação:</h2> <label>{{ mode }}</label>
+    <br>
+    <h2>Endereço IP:</h2> <label>{{ ip }}</label>
+		<br>
+    <h2>Máscara de sub-rede:</h2> <label>{{ mask }}</label>
+		<br>
+    <h2>Gateway:</h2> <label>{{ gateway }}</label>
+		<br>
+    <h2>Endereço MAC:</h2> <label>{{ mac }}</label>
+    <br>
+    <h2>Versão de hardware:</h2> <label>{{ hw }}</label>
+		<br>
+    <h2>Versão de firmware:</h2> <label>{{ fw }}</label>
+		<br>
+    <h2>Número serial:</h2> <label>{{ sr }}</label>
+		<br>
+  
+
+      <p>Dispositivo registrado para {{user.username}}</p>
+
+{% endblock %}

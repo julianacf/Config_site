@@ -1,0 +1,4 @@
+data = {
+{"hardware_ver": "1.A.0"},
+{"firmware_ver": 1.02.3}
+}

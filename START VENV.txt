@@ -1,0 +1,20 @@
+cd C:\Users\julia\mysite
+
+myvenv\Scripts\activate
+
+cd C:\Users\julia\mysite\mysite
+
+python manage.py runserver
+
+
+
+    <h2>Tipo de Conexão:</h2>{{ object.connect_choice }}
+		<br>
+    <h2>Modo de Operação:</h2>{{ object.op_mode }}
+    <br>
+    <h2>Endereço IP:</h2>{{ object.ip_adress }}
+		<br>
+    <h2>Máscara de sub-rede:</h2>{{ object.mask_adress }}
+		<br>
+    <h2>Gateway:</h2>{{ object.gateway_adress }}
+		<br>

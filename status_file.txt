@@ -1,0 +1,1 @@
+{"connect_choice": "0", "op_mode": "0", "ip_adress": "192.168.200.1", "mask_adress": "255.255.255.0", "gateway_adress": "192.168.1.1", "MAC": "00-0C-6E-3C-D1-6D", "hardware": "1.A.0", "firmware": "1.02.3", "serial": "123456"}

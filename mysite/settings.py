@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    #"config_site",
+    "config_site",
     "login_site",
 ]
 
@@ -49,6 +49,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    #'responsive.middleware.DeviceInfoMiddleware',
 ]
 
 ROOT_URLCONF = 'mysite.urls'
@@ -64,13 +65,21 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                #'responsive.context_processors.device_info',
             ],
         },
     },
 ]
 
+
 WSGI_APPLICATION = 'mysite.wsgi.application'
 
+
+#DEFAULT_BREAKPOINTS = {
+#    'phone': 480,
+#    'tablet': 767,
+#    'desktop': None,
+#}
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
@@ -121,4 +130,4 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-LOGIN_REDIRECT_URL = "/login_site/dashboard/"
+LOGIN_REDIRECT_URL = "/config_site/"
